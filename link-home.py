@@ -13,7 +13,7 @@ for root, dirs, files in os.walk(source):
         if filename in [".git", ".gitignore", ".hgignore", ".gitmodules"]:
             continue
 
-        dirname = os.path.dirname(os.path.join(dest+relativeToSource, filename))
+        dirname = os.path.dirname(os.path.join(dest, relativeToSource, filename))
         if dirname and not os.path.exists(dirname):
             os.makedirs(dirname)
-        os.system("cp -sRi \""+os.path.join(source+relativeToSource, filename)+"\" \""+os.path.join(dest+relativeToSource, filename)+"\"")
+        os.system("cp -sRi \""+os.path.join(source, relativeToSource, filename)+"\" \""+os.path.join(dest, relativeToSource, filename)+"\"")
