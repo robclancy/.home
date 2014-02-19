@@ -8,8 +8,11 @@ for root, dirs, files in os.walk(source):
         if vcs in dirs:
             dirs.remove(vcs);
 
-    relativeToSource = root.replace(source+"/", "", 1)
+    relativeToSource = root.replace(source, "", 1).lstrip("/")
     for filename in files:
+        if not relativeToSource and filename in ["README.md", "link-home.py"]:
+            continue
+
         if filename in [".git", ".gitignore", ".hgignore", ".gitmodules"]:
             continue
 
