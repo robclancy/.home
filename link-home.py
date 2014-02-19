@@ -8,7 +8,7 @@ for root, dirs, files in os.walk(source):
         if vcs in dirs:
             dirs.remove(vcs);
 
-    relativeToSource = root.replace(source, "", 1)
+    relativeToSource = root.replace(source+"/", "", 1)
     for filename in files:
         if filename in [".git", ".gitignore", ".hgignore", ".gitmodules"]:
             continue
