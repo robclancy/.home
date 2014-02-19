@@ -1,0 +1,21 @@
+[submodule ".config/sublime-text-3/Packages/Package Control"]
+	path = .config/sublime-text-3/Packages/Package Control
+	url = https://github.com/wbond/sublime_package_control.git
+[submodule ".config/sublime-text-3/Packages/SideBarEnhancements"]
+	path = .config/sublime-text-3/Packages/SideBarEnhancements
+	url = https://github.com/titoBouzout/SideBarEnhancements.git
+[submodule ".config/sublime-text-3/Packages/Theme - Dark Eight"]
+	path = .config/sublime-text-3/Packages/Theme - Dark Eight
+	url = https://github.com/ShawnMcCool/theme-dark-eight.git
+[submodule ".config/sublime-text-3/Packages/Dayle Rees Color Schemes"]
+	path = .config/sublime-text-3/Packages/Dayle Rees Color Schemes
+	url = https://github.com/daylerees/colour-schemes.git
+[submodule ".config/sublime-text-3/Packages/Emmet"]
+	path = .config/sublime-text-3/Packages/Emmet
+	url = https://github.com/sergeche/emmet-sublime.git
+[submodule ".config/sublime-text-3/Packages/Sass"]
+	path = .config/sublime-text-3/Packages/Sass
+	url = https://github.com/nathos/sass-textmate-bundle.git
+[submodule ".config/sublime-text-3/Packages/LESS"]
+	path = .config/sublime-text-3/Packages/LESS
+	url = https://github.com/danro/LESS-sublime.git

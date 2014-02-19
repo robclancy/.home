@@ -1,0 +1,17 @@
+{
+	"auto_close_tags": false,
+	"auto_complete": false,
+	"auto_match_enabled": false,
+	"color_scheme": "Packages/Dayle Rees Color Schemes/BlueDawn.tmTheme",
+	"font_size": 10,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"theme": "Eight.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"word_wrap": "false",
+	"line_padding_bottom": 6,
+	"line_padding_top": 6
+}
