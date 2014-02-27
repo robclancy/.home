@@ -19,3 +19,5 @@
     u = submodule update --init
     ur = submodule update --init --recursive
     size = "!. ~/.githelpers && show_git_sizes"
+[push]
+	default = matching

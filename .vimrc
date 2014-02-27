@@ -5,7 +5,3 @@ source ~/.vim/dragonvim/vimrc
 
 " Custom settings should be in /home/{USER}/.vim/vimrc
 source ~/.vim/vimrc
-
-" Enable powerline symbols
-let g:Powerline_symbols = 'fancy'
-set encoding=utf-8

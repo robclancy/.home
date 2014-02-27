@@ -3,6 +3,8 @@ import os
 source = os.path.dirname(os.path.realpath(__file__))
 dest = os.path.expanduser("~")
 
+os.system('touch ~/.vim/vimrc')
+
 for root, dirs, files in os.walk(source):
     for vcs in [".git", ".hg", ".svn"]:
         if vcs in dirs:
