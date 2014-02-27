@@ -19,3 +19,6 @@
 [submodule ".config/sublime-text-3/Packages/LESS"]
 	path = .config/sublime-text-3/Packages/LESS
 	url = https://github.com/danro/LESS-sublime.git
+[submodule ".vim/dragonvim"]
+	path = .vim/dragonvim
+	url = https://github.com/robclancy/dragonvim.git
