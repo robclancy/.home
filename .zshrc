@@ -10,7 +10,7 @@ COLORTERM='rxvt-unicode-256color'
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bira"
 
-LANG=en_US.utf8
+LANG=en_AU.utf8
 
 . /usr/share/zsh/site-contrib/powerline.zsh
 
@@ -83,3 +83,5 @@ function fuzzy_find {
     done
 }
 alias f=fuzzy_find
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
