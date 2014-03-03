@@ -50,6 +50,7 @@ say() { if [[ "${1}" =~ -[a-z]{2} ]]; then local lang=${1#-}; local text="${*#$1
 export EDITOR=vim
 
 ## Aliases
+alias rs="sudo -sE"
 
 # PHP aliases
 alias composer="php composer.phar"
