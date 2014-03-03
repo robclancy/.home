@@ -51,6 +51,7 @@ export EDITOR=vim
 
 ## Aliases
 alias rs="sudo -sE"
+alias mkdir="mkdir -p"
 
 # PHP aliases
 alias composer="php composer.phar"
