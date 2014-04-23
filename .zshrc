@@ -1,9 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=/usr/share/oh-my-zsh/
 
-TERM='rxvt-unicode'
-COLORTERM='rxvt-unicode-256color'
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -41,7 +38,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 #export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-export PATH=$PATH:$HOME/bin
 
 # Voice echo
 say() { if [[ "${1}" =~ -[a-z]{2} ]]; then local lang=${1#-}; local text="${*#$1}"; else local lang=${LANG%_*}; local text="$*";fi; mplayer "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" &> /dev/null ; }
@@ -57,13 +53,6 @@ alias mkdir="mkdir -p"
 alias composer="php composer.phar"
 alias composer-install="curl -sS https://getcomposer.org/installer | php && composer install"
 alias artisan="php artisan"
-
-# Quick command to paste a file to paste.laravel.com
-# Use: paste file.php
-function laravel_paste {
-    curl -sL -w "$1 Uploaded to paste.laravel.com\\n\\tStatus: %{http_code}\\n\\tURL: %{url_effective}\\n" --data-urlencode paste@$1 "http://paste.laravel.com" -o /dev/null
-}
-alias paste=laravel_paste
 
 # Go aliases
 alias gb="go build"
@@ -86,4 +75,5 @@ function fuzzy_find {
 }
 alias f=fuzzy_find
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
