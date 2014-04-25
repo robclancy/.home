@@ -1,0 +1,38 @@
+# ~/.tmuxinator/site-generator.yml
+
+name: site-generator
+root: ~/projects/tbb/site-generator
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - editor:
+      layout: f98d,230x59,0,0[230x40,0,0,0,230x18,0,41,4]
+      panes:
+        - vim
+        - 
+  - sudandola:
+      layout: main-horizontal
+      panes:
+        - cd source/base/data && git pull && cd ../../sudandola/data && git pull && cd ../content && git pull && cd ../../../ && SITE=sudandola bundle exec middleman
+        - cd source/sudandola/data
+        - cd source/sudandola/content
+  - sudandola:
+      layout: main-horizontal
+      panes:
+        - cd source/base/data && git pull && cd ../../belleza/data && git pull && cd ../content && git pull && cd ../../../ && SITE=belleza bundle exec middleman --port=4568
+        - cd source/belleza/data
+        - cd source/belleza/content
